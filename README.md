@@ -23,8 +23,6 @@ O sistema não realiza diagnósticos médicos
 Funciona apenas como ferramenta de apoio à triagem
 🛠️ Tecnologias Utilizadas
 
-(adicione aqui conforme for desenvolvendo, exemplo abaixo)
-
 HTML
 CSS
 JavaScript
