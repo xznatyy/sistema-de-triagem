@@ -1,0 +1,6 @@
+{
+  "name": "Sistema de Triagem Manchester",
+  "description": "Sistema de triagem médica com automação de prioridades do Protocolo Manchester, painel administrativo em tempo real, API REST para integração, formulário de avaliação e notificações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

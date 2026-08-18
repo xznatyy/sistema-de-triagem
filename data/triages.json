@@ -1,0 +1,535 @@
+{
+  "nextTicketNumber": 1009,
+  "apiKeys": [
+    {
+      "id": "key_prod_01",
+      "name": "Integração Recepção / Totem",
+      "key": "tr_live_89f02a3d7c92b41",
+      "createdAt": "2026-08-05T11:38:11.366Z",
+      "lastUsedAt": "2026-08-10T10:38:11.367Z"
+    },
+    {
+      "id": "key_app_mobile",
+      "name": "App Triagem Móvel Enfermagem",
+      "key": "tr_live_17e31b219a0094e",
+      "createdAt": "2026-08-08T11:38:11.367Z",
+      "lastUsedAt": "2026-08-10T11:23:11.367Z"
+    }
+  ],
+  "webhooks": [
+    {
+      "id": "wh_emergencia",
+      "url": "https://api.hospital-central.gov.br/v1/alertas-emergencia",
+      "events": [
+        "urgent_ticket",
+        "ticket_called"
+      ],
+      "active": true,
+      "createdAt": "2026-07-31T11:38:11.367Z"
+    }
+  ],
+  "notifications": [
+    {
+      "ticketId": "TR-1003",
+      "patientName": "Mariana Souza Santos",
+      "color": "orange",
+      "type": "paciente_chamado",
+      "message": "Paciente Mariana Souza Santos chamado para o Consultório 01",
+      "id": "notif_1787054653337_dlb5",
+      "timestamp": "2026-08-18T12:04:13.337Z",
+      "read": false
+    },
+    {
+      "ticketId": "TR-1002",
+      "patientName": "Roberto Alves Lima",
+      "color": "yellow",
+      "type": "paciente_chamado",
+      "message": "Paciente Roberto Alves Lima chamado para o Sala Vermelha - Emergência",
+      "id": "notif_1787054646811_2rkr",
+      "timestamp": "2026-08-18T12:04:06.811Z",
+      "read": false
+    },
+    {
+      "ticketId": "TR-1008",
+      "patientName": "Mariana Souza Santos",
+      "color": "orange",
+      "type": "paciente_chamado",
+      "message": "Paciente Mariana Souza Santos chamado para o Consultório 01",
+      "id": "notif_1787054598549_mz65",
+      "timestamp": "2026-08-18T12:03:18.549Z",
+      "read": false
+    },
+    {
+      "ticketId": "TR-1008",
+      "patientName": "Mariana Souza Santos",
+      "color": "orange",
+      "type": "emergencia_triada",
+      "message": "⚡ MUITO URGENTE (LARANJA): Paciente Mariana Souza Santos na fila de espera (10 min limite).",
+      "id": "notif_1787054586727_zye0",
+      "timestamp": "2026-08-18T12:03:06.727Z",
+      "read": false
+    },
+    {
+      "ticketId": "TR-1004",
+      "patientName": "Carlos Eduardo Oliveira",
+      "color": "red",
+      "type": "paciente_chamado",
+      "message": "Paciente Carlos Eduardo Oliveira chamado para o Consultório 01",
+      "id": "notif_1786362075242_e1pl",
+      "timestamp": "2026-08-10T11:41:15.242Z",
+      "read": false
+    },
+    {
+      "id": "notif_1",
+      "timestamp": "2026-08-10T11:26:11.367Z",
+      "ticketId": "TR-1004",
+      "patientName": "Carlos Eduardo Oliveira",
+      "color": "red",
+      "type": "emergencia_triada",
+      "message": "PACIENTE CRÍTICO (VERMELHO): Dor torácica opressiva com sudorese. Atendimento Imediato!",
+      "read": false
+    },
+    {
+      "id": "notif_2",
+      "timestamp": "2026-08-10T11:30:11.367Z",
+      "ticketId": "TR-1003",
+      "patientName": "Mariana Souza Santos",
+      "color": "orange",
+      "type": "emergencia_triada",
+      "message": "Novo paciente Laranja triado: Dispneia moderada e SpO2 92%. Tempo limite: 10 min.",
+      "read": false
+    },
+    {
+      "id": "notif_3",
+      "timestamp": "2026-08-10T11:13:11.367Z",
+      "ticketId": "TR-1002",
+      "patientName": "Roberto Alves Lima",
+      "color": "yellow",
+      "type": "sla_estourado",
+      "message": "Aviso de SLA: Paciente atingiu 50% do tempo máximo de espera (Amarelo).",
+      "read": true
+    }
+  ],
+  "tickets": [
+    {
+      "patient": {
+        "fullName": "Mariana Souza Santos",
+        "cpf": "234.567.890-11",
+        "birthDate": "1992-09-25",
+        "age": 33,
+        "gender": "feminino",
+        "phone": "(11) 97654-3210",
+        "susCard": "712 9876 5432 0002"
+      },
+      "vitalSigns": {
+        "systolicBP": 135,
+        "diastolicBP": 88,
+        "heartRate": 112,
+        "respiratoryRate": 26,
+        "oxygenSaturation": 92,
+        "temperature": 38.4,
+        "painScale": 7,
+        "bloodGlucose": 95,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Falta de ar progressiva e sibilância",
+        "symptomsDescription": "Crise de asma que não respondeu ao uso de bombinha em casa. Dificuldade para completar frases.",
+        "onsetDuration": "2 horas",
+        "allergies": "Aspirina, AINEs",
+        "preExistingConditions": [
+          "Asma Brônquica"
+        ],
+        "discriminators": [
+          "falta_de_ar_grave",
+          "dor_severa_isquemia"
+        ]
+      },
+      "color": "orange",
+      "priorityLevel": 2,
+      "maxWaitMinutes": 10,
+      "status": "concluido",
+      "triageNurse": "Enf. Juliana Mendes (COREN 142.590)",
+      "justification": "Classificação automatizada em **LARANJA (Muito Urgente)** - Prioridade 2. Tempo máximo para atendimento: 10 minutos. Fatores determinantes: Saturação de Oxigênio Baixa (SpO2 92%); Dor Intensa (Escala 7/10); Discriminador Clínico: Dispneia / Falta de Ar Severa; Discriminador Clínico: Dor Severa Inconsolável (Escala 8-10).",
+      "id": "TR-1008",
+      "ticketNumber": 1008,
+      "createdAt": "2026-08-18T12:03:06.727Z",
+      "updatedAt": "2026-08-18T12:04:42.157Z",
+      "auditLog": [
+        {
+          "id": "log_1787054586727",
+          "timestamp": "2026-08-18T12:03:06.727Z",
+          "action": "Triagem Criada e Classificada",
+          "user": "Enf. Juliana Mendes (COREN 142.590)",
+          "notes": "Classificado em ORANGE"
+        },
+        {
+          "id": "log_1787054598550",
+          "timestamp": "2026-08-18T12:03:18.549Z",
+          "action": "Chamado para Consultório 01",
+          "user": "Equipe de Atendimento",
+          "notes": "Paciente chamado para Consultório 01"
+        },
+        {
+          "id": "log_1787054682157",
+          "timestamp": "2026-08-18T12:04:42.157Z",
+          "action": "Atendimento Concluído",
+          "user": "Equipe de Atendimento",
+          "notes": "Atendimento concluído pelo painel"
+        }
+      ],
+      "room": "Consultório 01",
+      "attendingDoctor": "Dr. Plantonista",
+      "calledAt": "2026-08-18T12:03:18.549Z",
+      "completedAt": "2026-08-18T12:04:42.157Z"
+    },
+    {
+      "id": "TR-1004",
+      "ticketNumber": 1004,
+      "createdAt": "2026-08-10T11:26:11.367Z",
+      "updatedAt": "2026-08-18T12:04:34.517Z",
+      "patient": {
+        "fullName": "Carlos Eduardo Oliveira",
+        "cpf": "123.456.789-00",
+        "birthDate": "1968-04-12",
+        "age": 58,
+        "gender": "masculino",
+        "phone": "(11) 98765-4321",
+        "susCard": "898 1234 5678 0001"
+      },
+      "vitalSigns": {
+        "systolicBP": 175,
+        "diastolicBP": 105,
+        "heartRate": 118,
+        "respiratoryRate": 24,
+        "oxygenSaturation": 91,
+        "temperature": 36.8,
+        "painScale": 9,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Dor no peito irradiando para o braço esquerdo há 40 minutos",
+        "symptomsDescription": "Sensação de aperto forte no tórax, náusea leve e sudorese fria. Iniciou em repouso.",
+        "onsetDuration": "40 minutos",
+        "allergies": "Dipirona",
+        "preExistingConditions": [
+          "Hipertensão",
+          "Diabetes Tipo 2"
+        ],
+        "discriminators": [
+          "dor_toracica_intensa",
+          "dor_severa_isquemia"
+        ]
+      },
+      "color": "red",
+      "priorityLevel": 1,
+      "maxWaitMinutes": 0,
+      "status": "concluido",
+      "triageNurse": "Enf. Juliana Mendes (COREN 142.590)",
+      "justification": "Classificação automatizada em VERMELHO (Emergência). Atendimento Imediato. Fatores: Suspeita de Síndrome Coronariana Aguda, SpO2 91%, Dor de intensidade 9/10.",
+      "auditLog": [
+        {
+          "id": "log_1",
+          "timestamp": "2026-08-10T11:26:11.367Z",
+          "action": "Triagem Realizada",
+          "user": "Enf. Juliana Mendes",
+          "notes": "Triagem de emergência concluída e paciente encaminhado à Sala Vermelha."
+        },
+        {
+          "id": "log_1786362075244",
+          "timestamp": "2026-08-10T11:41:15.242Z",
+          "action": "Chamado para Consultório 01",
+          "user": "Equipe de Atendimento",
+          "notes": "Paciente chamado para Consultório 01"
+        },
+        {
+          "id": "log_1787054674517",
+          "timestamp": "2026-08-18T12:04:34.517Z",
+          "action": "Atendimento Concluído",
+          "user": "Equipe de Atendimento",
+          "notes": "Atendimento concluído pelo painel"
+        }
+      ],
+      "room": "Consultório 01",
+      "attendingDoctor": "Dr. Plantonista",
+      "calledAt": "2026-08-10T11:41:15.242Z",
+      "completedAt": "2026-08-18T12:04:34.517Z"
+    },
+    {
+      "id": "TR-1003",
+      "ticketNumber": 1003,
+      "createdAt": "2026-08-10T11:31:11.367Z",
+      "updatedAt": "2026-08-18T12:04:39.757Z",
+      "patient": {
+        "fullName": "Mariana Souza Santos",
+        "cpf": "234.567.890-11",
+        "birthDate": "1992-09-25",
+        "age": 33,
+        "gender": "feminino",
+        "phone": "(11) 97654-3210",
+        "susCard": "712 9876 5432 0002"
+      },
+      "vitalSigns": {
+        "systolicBP": 135,
+        "diastolicBP": 88,
+        "heartRate": 112,
+        "respiratoryRate": 26,
+        "oxygenSaturation": 92,
+        "temperature": 38.4,
+        "painScale": 7,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Falta de ar progressiva e sibilância",
+        "symptomsDescription": "Crise de asma que não respondeu ao uso de bombinha em casa. Dificuldade para completar frases.",
+        "onsetDuration": "2 horas",
+        "allergies": "Aspirina, AINEs",
+        "preExistingConditions": [
+          "Asma Brônquica"
+        ],
+        "discriminators": [
+          "falta_de_ar_grave",
+          "dor_severa_isquemia"
+        ]
+      },
+      "color": "orange",
+      "priorityLevel": 2,
+      "maxWaitMinutes": 10,
+      "status": "concluido",
+      "triageNurse": "Enf. Juliana Mendes (COREN 142.590)",
+      "justification": "Classificação automatizada em LARANJA (Muito Urgente). Tempo máximo: 10 min. Fatores: SpO2 92%, Taquipneia (26 ipm), Crise asmática grave.",
+      "auditLog": [
+        {
+          "id": "log_2",
+          "timestamp": "2026-08-10T11:31:11.367Z",
+          "action": "Triagem Realizada",
+          "user": "Enf. Juliana Mendes",
+          "notes": "Paciente colocada em inalação com O2 e aguardando médico."
+        },
+        {
+          "id": "log_1787054653340",
+          "timestamp": "2026-08-18T12:04:13.337Z",
+          "action": "Chamado para Consultório 01",
+          "user": "Equipe de Atendimento",
+          "notes": "Paciente chamado para Consultório 01"
+        },
+        {
+          "id": "log_1787054679757",
+          "timestamp": "2026-08-18T12:04:39.757Z",
+          "action": "Atendimento Concluído",
+          "user": "Equipe de Atendimento",
+          "notes": "Atendimento concluído pelo painel"
+        }
+      ],
+      "room": "Consultório 01",
+      "attendingDoctor": "Dr. Plantonista",
+      "calledAt": "2026-08-18T12:04:13.337Z",
+      "completedAt": "2026-08-18T12:04:39.757Z"
+    },
+    {
+      "id": "TR-1002",
+      "ticketNumber": 1002,
+      "createdAt": "2026-08-10T11:03:11.367Z",
+      "updatedAt": "2026-08-18T12:04:49.059Z",
+      "patient": {
+        "fullName": "Roberto Alves Lima",
+        "cpf": "345.678.901-22",
+        "birthDate": "1981-11-03",
+        "age": 44,
+        "gender": "masculino",
+        "phone": "(11) 96543-2109"
+      },
+      "vitalSigns": {
+        "systolicBP": 148,
+        "diastolicBP": 92,
+        "heartRate": 88,
+        "respiratoryRate": 18,
+        "oxygenSaturation": 97,
+        "temperature": 38.9,
+        "painScale": 6,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Febre persistente de 38.9°C e dor abdominal contínua",
+        "symptomsDescription": "Dor na fossa ilíaca direita há cerca de 12 horas, acompanhada de falta de apetite e náuseas.",
+        "onsetDuration": "12 horas",
+        "allergies": "Nenhuma",
+        "preExistingConditions": [],
+        "discriminators": [
+          "febre_alta_com_calafrios",
+          "dor_abdominal_moderada"
+        ]
+      },
+      "color": "yellow",
+      "priorityLevel": 3,
+      "maxWaitMinutes": 60,
+      "status": "concluido",
+      "triageNurse": "Enf. Lucas Costa (COREN 198.320)",
+      "justification": "Classificação automatizada em AMARELO (Urgente). Tempo máximo: 60 min. Fatores: Febre 38.9°C e suspeita de apendicite aguda.",
+      "auditLog": [
+        {
+          "id": "log_3",
+          "timestamp": "2026-08-10T11:03:11.367Z",
+          "action": "Triagem Realizada",
+          "user": "Enf. Lucas Costa"
+        },
+        {
+          "id": "log_1787054646812",
+          "timestamp": "2026-08-18T12:04:06.811Z",
+          "action": "Chamado para Sala Vermelha - Emergência",
+          "user": "Equipe de Atendimento",
+          "notes": "Paciente chamado para Sala Vermelha - Emergência"
+        },
+        {
+          "id": "log_1787054689059",
+          "timestamp": "2026-08-18T12:04:49.059Z",
+          "action": "Atendimento Concluído",
+          "user": "Equipe de Atendimento",
+          "notes": "Atendimento concluído pelo painel"
+        }
+      ],
+      "room": "Sala Vermelha - Emergência",
+      "attendingDoctor": "Dra. Nataly",
+      "calledAt": "2026-08-18T12:04:06.811Z",
+      "completedAt": "2026-08-18T12:04:49.059Z"
+    },
+    {
+      "id": "TR-1001",
+      "ticketNumber": 1001,
+      "createdAt": "2026-08-10T10:48:11.367Z",
+      "updatedAt": "2026-08-18T12:04:45.420Z",
+      "patient": {
+        "fullName": "Ana Beatriz Ferreira",
+        "cpf": "456.789.012-33",
+        "birthDate": "2001-02-18",
+        "age": 25,
+        "gender": "feminino",
+        "phone": "(11) 95432-1098"
+      },
+      "vitalSigns": {
+        "systolicBP": 120,
+        "diastolicBP": 80,
+        "heartRate": 76,
+        "respiratoryRate": 16,
+        "oxygenSaturation": 98,
+        "temperature": 36.6,
+        "painScale": 3,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Tosse seca e dor de garganta suave",
+        "symptomsDescription": "Sintomas iniciaram há 2 dias. Sem febre ou falta de ar.",
+        "onsetDuration": "2 dias",
+        "allergies": "Penicilina",
+        "preExistingConditions": [],
+        "discriminators": [
+          "sintoma_respiratorio_leve",
+          "dor_leve_escala"
+        ]
+      },
+      "color": "green",
+      "priorityLevel": 4,
+      "maxWaitMinutes": 120,
+      "status": "concluido",
+      "room": "Consultório 03",
+      "attendingDoctor": "Dr. Fernando Rocha (CRM 124.890)",
+      "calledAt": "2026-08-10T11:23:11.367Z",
+      "triageNurse": "Enf. Lucas Costa (COREN 198.320)",
+      "justification": "Classificação automatizada em VERDE (Pouco Urgente). Tempo máximo: 120 min. Sinais vitais normais e sintomas leves.",
+      "auditLog": [
+        {
+          "id": "log_4a",
+          "timestamp": "2026-08-10T10:48:11.367Z",
+          "action": "Triagem Realizada",
+          "user": "Enf. Lucas Costa"
+        },
+        {
+          "id": "log_4b",
+          "timestamp": "2026-08-10T11:23:11.367Z",
+          "action": "Chamado para Consultório 03",
+          "user": "Dr. Fernando Rocha"
+        },
+        {
+          "id": "log_1787054685420",
+          "timestamp": "2026-08-18T12:04:45.420Z",
+          "action": "Atendimento Concluído",
+          "user": "Equipe de Atendimento",
+          "notes": "Atendimento concluído pelo painel"
+        }
+      ],
+      "completedAt": "2026-08-18T12:04:45.420Z"
+    },
+    {
+      "id": "TR-1000",
+      "ticketNumber": 1000,
+      "createdAt": "2026-08-10T10:08:11.367Z",
+      "updatedAt": "2026-08-10T11:18:11.367Z",
+      "patient": {
+        "fullName": "José Geraldo da Silva",
+        "cpf": "567.890.123-44",
+        "birthDate": "1955-07-30",
+        "age": 71,
+        "gender": "masculino",
+        "phone": "(11) 94321-0987"
+      },
+      "vitalSigns": {
+        "systolicBP": 130,
+        "diastolicBP": 82,
+        "heartRate": 70,
+        "respiratoryRate": 15,
+        "oxygenSaturation": 98,
+        "temperature": 36.4,
+        "painScale": 0,
+        "glasgowScale": 15,
+        "consciousnessLevel": "alerta"
+      },
+      "questionnaire": {
+        "chiefComplaint": "Renovação de receita de remédio de uso contínuo (Pressão alta)",
+        "symptomsDescription": "Paciente sem queixas agudas. Precisa apenas de nova receita de Losartana e Anlodipino.",
+        "onsetDuration": "Contínuo",
+        "allergies": "Nenhuma",
+        "preExistingConditions": [
+          "Hipertensão Arterial Systemica"
+        ],
+        "discriminators": [
+          "renovacao_receita"
+        ]
+      },
+      "color": "blue",
+      "priorityLevel": 5,
+      "maxWaitMinutes": 240,
+      "status": "concluido",
+      "room": "Consultório 01",
+      "attendingDoctor": "Dra. Camila Nogueira (CRM 156.432)",
+      "calledAt": "2026-08-10T11:08:11.367Z",
+      "completedAt": "2026-08-10T11:18:11.367Z",
+      "triageNurse": "Enf. Juliana Mendes (COREN 142.590)",
+      "justification": "Classificação automatizada em AZUL (Não Urgente). Atendimento administrativo para renovação de prescrição.",
+      "auditLog": [
+        {
+          "id": "log_5a",
+          "timestamp": "2026-08-10T10:08:11.367Z",
+          "action": "Triagem Realizada",
+          "user": "Enf. Juliana Mendes"
+        },
+        {
+          "id": "log_5b",
+          "timestamp": "2026-08-10T11:08:11.367Z",
+          "action": "Chamado para Consultório 01",
+          "user": "Dra. Camila Nogueira"
+        },
+        {
+          "id": "log_5c",
+          "timestamp": "2026-08-10T11:18:11.367Z",
+          "action": "Atendimento Concluído",
+          "user": "Dra. Camila Nogueira"
+        }
+      ]
+    }
+  ]
+}
